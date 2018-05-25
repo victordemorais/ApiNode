@@ -30,9 +30,7 @@ exports.onError = (server) => {
     };
 };
 exports.onListening = (server) => {
-    return () => {
-        let addr = server.address().toString();
-        let bind = (typeof addr === 'string') ? `pipe ${addr}` : `port ${addr}`;
-        console.log(`Listening at ${bind}...`);
-    };
+    let addr = server.address();
+    let bind = (typeof addr === 'string') ? `pipe ${addr}` : `port ${addr.port}`;
+    console.log(`Listening on ${bind}`);
 };
