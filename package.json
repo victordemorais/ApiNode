@@ -2,7 +2,7 @@
   "name": "node-api",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/app.js",
+  "main": "dist/index.js",
   "scripts": {
     "gulp": "node_modules/.bin/gulp",
     "dev": "nodemon --delay 5"
